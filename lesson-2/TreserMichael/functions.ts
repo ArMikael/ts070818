@@ -34,3 +34,17 @@
     console.log('Strings array with 1 argument: ', result4);
     console.log('Strings array with 1 arguments that\'s not in array: ', result5);
 })();
+
+
+// Написать функцию summator(), которая сумирует переданые ей аргументы.
+// Аргументы могут быть либо строкового либо числового типа. Количество их не ограничено. Проверяйте NaN
+
+function summator(...args: number[]): number {
+    if (args.length) {
+        return args.reduce((a: number, b: number) => a + b);
+    }
+
+    return 0;
+}
+
+summator();
